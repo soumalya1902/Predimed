@@ -56,8 +56,8 @@ with st.sidebar:
         'Lung Cancer Prediction',
         'Kidney Disease Prediction',
         'Breast Cancer Prediction',
-        'About App',
-        'About Author',
+        'About Predimed WebApp',
+        'About the Author',
 
     ],
         icons=['house-add','activity', 'heart-pulse', 'person-add','bar-chart','person-plus','lungs','heart','gender-female'],
