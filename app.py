@@ -909,3 +909,22 @@ if selected == 'Breast Cancer Prediction':
             breast_cancer_result = "The model predicts that you don't have Breast Cancer."
 
         st.success(breast_cancer_result)
+        # About App
+if selected == 'About App':
+    st.title('Predimed - Multiple Disease Prediction Tool')
+    st.write(
+        """
+        Welcome to Predimed, a Multiple Disease Prediction System. This application helps to predict various diseases 
+        such as Diabetes, Heart Disease, Parkinson, Liver Disease, Hepatitis, Lung Cancer, Kideny Disease and Breast Cancer. Please navigate through the sidebar to access different 
+        prediction pages. After making predictions, you can provide personal details for a final comprehensive report. 
+        Let's get started!
+        """
+    )
+        # About Author
+if selected == 'About Author':
+    st.title('Team Members behind this Model Building')
+    st.write(
+        """
+        Soumalya Bhattacharyya, Sayan Pan, Ritam Koley and Dinayan Mallik
+        """
+    )
