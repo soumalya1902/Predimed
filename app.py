@@ -65,11 +65,11 @@ with st.sidebar:
     
 # About App
 if selected == 'About App':
-    st.title('Predimed - Multiple Disease Prediction Tool')
+    st.title('Predimed - Multiple Disease Predictor')
     st.write(
         """
         Welcome to Predimed, a Multiple Disease Prediction System. This application helps to predict various diseases 
-        such as Diabetes, Heart Disease, Parkinson, Liver Disease, Hepatitis, Lung Cancer, Kideny Disease and Breast Cancer. Please navigate through the sidebar to access different 
+        such as Diabetes, Heart Disease, Parkinson, Liver Disease, Hepatitis, Lung Cancer, Kidney Disease and Breast Cancer. Please navigate through the sidebar to access different 
         prediction pages. After making predictions, you can provide personal details for a final comprehensive report. 
         Let's get started!
         """
