@@ -60,7 +60,7 @@ with st.sidebar:
         'Authors Dashboard',
 
     ],
-        icons=['house-add','activity', 'heart-pulse', 'person-add','bar-chart','person-plus','lungs','heart','gender-female'],
+        icons=['house-add','activity', 'heart-pulse', 'person-add','bar-chart','person-plus','lungs','heart','gender-female','gear', 'file-richtext'],
         default_index=0)
     
 # About App
