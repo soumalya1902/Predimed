@@ -57,14 +57,14 @@ with st.sidebar:
         'Kidney Disease Prediction',
         'Breast Cancer Prediction',
         'About Predimed WebApp',
-        'About the Author',
+        'About the Authors',
 
     ],
         icons=['house-add','activity', 'heart-pulse', 'person-add','bar-chart','person-plus','lungs','heart','gender-female'],
         default_index=0)
     
 # About App
-if selected == 'About App':
+if selected == 'About Predimed WebApp':
     st.title('Predimed - Multiple Disease Predictor')
     st.write(
         """
@@ -75,7 +75,7 @@ if selected == 'About App':
         """
     )
 # About Author
-if selected == 'About Author':
+if selected == 'About the Authors':
     st.title('Team Members behind this Model Building')
     st.write(
         """
