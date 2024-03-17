@@ -16,6 +16,13 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import joblib
 
+st.set_page_config(
+    page_title="Predimed",
+    page_icon = "🧡",
+    initial_sidebar_state = 'auto'
+)
+
+
 # loading the models
 diabetes_model = joblib.load("models/diabetes_model.sav")
 heart_model = joblib.load("models/heart_disease_model.sav")
