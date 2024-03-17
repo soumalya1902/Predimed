@@ -18,7 +18,7 @@ import joblib
 
 st.set_page_config(
     page_title="Predimed",
-    page_icon = "🧡",
+    
     initial_sidebar_state = 'auto'
 )
 
