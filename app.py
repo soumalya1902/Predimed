@@ -65,7 +65,7 @@ with st.sidebar:
     
 # About App
 if selected == 'About Predimed WebApp':
-    st.title('Predimed - Multiple Disease Predictor')
+    st.title('Predimed - Multi Disease Predictor')
     st.write(
         """
         Welcome to Predimed, a Multiple Disease Prediction System. This application helps to predict various diseases 
@@ -76,7 +76,7 @@ if selected == 'About Predimed WebApp':
     )
 # About Author
 if selected == 'Authors Dashboard':
-    st.title('Team Members behind this Model Building')
+    st.title('Team Members for Model Building')
     st.write(
         """
         Soumalya Bhattacharyya, Sayan Pan, Ritam Koley and Dinayan Mallik
