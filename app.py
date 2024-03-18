@@ -79,7 +79,7 @@ if selected == 'Authors Dashboard':
     st.title('Team Members for Model Building')
     st.write(
         """
-        Soumalya Bhattacharyya - Final Year ECE Student from Techno Main Saltlake, Kolkata
+        Soumalya Bhattacharyya - Final Year B.Tech in ECE Student from Techno Main Saltlake, Kolkata
         """
     )
 
