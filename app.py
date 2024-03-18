@@ -92,7 +92,7 @@ if selected == 'Disease Prediction':
     disease_model.load_xgboost('model/xgboost_model.json')
 
     # Title
-    st.write('# Multiple Disease Prediction Tool')
+    st.write('# Multiple Disease Prediction System')
 
     symptoms = st.multiselect('What are your symptoms?', options=disease_model.all_symptoms)
 
