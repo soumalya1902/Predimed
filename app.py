@@ -80,8 +80,6 @@ if selected == 'Authors Dashboard':
     st.write(
         """
         Soumalya Bhattacharyya - Final Year B.Tech in ECE Student from Techno Main Saltlake, Kolkata
-        Sayan Pan - Final Year B.Tech in ECE Student from Techno Main Saltlake, Kolkata
-        Ritam Koley - Final Year B.Tech in ECE Student from Techno Main Saltlake, Kolkata
         """
     )
 
