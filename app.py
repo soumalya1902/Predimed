@@ -482,7 +482,6 @@ if selected == 'Lung Cancer Prediction':
         st.success(name + '' + cancer_result)
 
 
-
 # Thyroid prediction page
 if selected == 'Thyroid Disease Prediction':
     st.title("Thyroid Disease Prediction")
@@ -604,6 +603,7 @@ if selected == 'Thyroid Disease Prediction':
             st.image(image, caption='')
 
         st.success(name + '' + thyroid_result)
+
 
 
 # Liver prediction page
