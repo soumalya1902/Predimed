@@ -47,6 +47,8 @@ lung_cancer_model = joblib.load('models/lung_cancer_model.sav')
 # sidebar
 with st.sidebar:
     selected = option_menu('Predimed Model', [
+        'Authors Dashboard',
+        'About Predimed',
         'Disease Prediction',
         'Diabetes Prediction',
         'Heart Disease Prediction',
@@ -56,9 +58,7 @@ with st.sidebar:
         'Lung Cancer Prediction',
         'Kidney Disease Prediction',
         'Breast Cancer Prediction',
-        'About Predimed WebApp',
-        'Authors Dashboard',
-
+        
     ],
         icons=['house-add','activity', 'heart-pulse', 'person-add','bar-chart','person-plus','lungs','heart','gender-female','gear', 'book'],
         default_index=0)
