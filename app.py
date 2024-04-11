@@ -43,6 +43,9 @@ hepatitis_model = joblib.load('models/hepititisc_model.sav')
 liver_model = joblib.load('models/liver_model.sav')# Load the lung cancer prediction model
 lung_cancer_model = joblib.load('models/lung_cancer_model.sav')
 
+with open('models/thyroid_model.pkl', 'rb') as f:
+    thyroid_model = pickle.load(f)
+
 
 # sidebar
 with st.sidebar:
@@ -479,6 +482,128 @@ if selected == 'Lung Cancer Prediction':
         st.success(name + '' + cancer_result)
 
 
+
+# Thyroid prediction page
+if selected == 'Thyroid Disease Prediction':
+    st.title("Thyroid Disease Prediction")
+    
+
+    # Columns
+    # No inputs from the user
+    name = st.text_input("Name of the Patient:")
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        age = st.number_input("Age")  # 2
+    with col2:
+        sex = st.selectbox("Sex", ["Male", "Female"])
+        sex = 1 if sex == "Male" else 2
+    with col3:
+        on_thyroxine = st.selectbox("On Thyroxine", ['NO', 'YES'])
+
+    with col1:
+        query_on_thyroxine = st.selectbox("Query On Thyroxine", ['NO', 'YES'])
+    with col2:
+        on_antithyroid_meds = st.selectbox("On Antithyroid Meds", ['NO', 'YES'])
+    with col3:
+        sick = st.selectbox("Sick", ['NO', 'YES'])
+
+    with col1:
+        pregnant = st.selectbox("Pregnant", ['NO', 'YES'])
+    with col2:
+        thyroid_surgery = st.selectbox("Thyroid Surgery", ['NO', 'YES'])
+    with col3:
+        I131_treatment = st.selectbox("I131 Treatment", ['NO', 'YES'])
+
+    with col1:
+        query_hypothyroid = st.selectbox("Query Hypothyroid", ['NO', 'YES'])
+
+    with col2:
+        query_hyperthyroid = st.selectbox("Query Hyperthyroid", ['NO', 'YES'])
+    with col3:
+        lithium = st.selectbox("Lithium", ['NO', 'YES'])
+
+
+    with col1:
+        goitre = st.selectbox("Goitre", ['NO', 'YES'])
+
+    with col2:
+        tumor = st.selectbox("Tumor", ['NO', 'YES'])
+    with col3:
+        hypopituitary = st.selectbox("Hypopituitary", ['NO', 'YES'])
+
+    with col1:
+        psych = st.selectbox("Psych", ['NO', 'YES'])
+
+    with col2:
+        TSH = st.number_input("Enter TSH Value") 
+    with col3:
+        T3 = st.number_input("Enter T3 Value") 
+
+    with col1:
+        TT4 = st.number_input("Enter TT4 Value") 
+
+    with col2:
+        T4U = st.number_input("Enter T4U Value") 
+    with col3:
+        FTI = st.number_input("Enter FTI Value") 
+
+    
+
+    # Code for prediction
+    thyroid_result = ''
+
+    # Button
+    if st.button("Thyroid Test Result"):
+        # Create a DataFrame with user inputs
+        user_data = pd.DataFrame({
+            'age': [age],
+            'sex': [sex],
+            'on_thyroxine': [on_thyroxine], 
+            'query_on_thyroxine': [query_on_thyroxine],  
+            'on_antithyroid_meds': [on_antithyroid_meds], 
+            'sick': [sick],
+            'pregnant': [pregnant], 
+            'thyroid_surgery': [thyroid_surgery],  
+            'I131_treatment': [I131_treatment],  
+            'query_hypothyroid': [query_hypothyroid],  
+            'query_hyperthyroid': [query_hyperthyroid],  
+            'lithium': [lithium],  
+            'goitre': [goitre],
+            'tumor': [tumor],  
+            'hypopituitary': [hypopituitary],  
+            'psych': [psych], 
+            'TSH': [TSH],  
+            'T3': [T3],  
+            'TT4': [TT4],
+            'T4U': [T4U],  
+            'FTI': [FTI],  
+            
+        })
+
+         # Map string values to numeric
+        user_data.replace({'NO': 1, 'YES': 2}, inplace=True)
+
+        # Strip leading and trailing whitespaces from column names
+        user_data.columns = user_data.columns.str.strip()
+
+        # Convert columns to numeric where necessary
+        numeric_columns = ['on_thyroxine', 'query_on_thyroxine', 'on_antithyroid_meds', 'sick', 'pregnant', 'thyroid_surgery','I131_treatment','query_hypothyroid','query_hyperthyroid','lithium','goitre','tumor','hypopituitary','psych']
+        user_data[numeric_columns] = user_data[numeric_columns].apply(pd.to_numeric, errors='coerce')
+
+        # Perform prediction
+        thyroid_prediction = thyroid_model.predict(user_data)
+        # Display result
+        if thyroid_prediction[0] == 1:
+            thyroid_result = "We are really sorry to say but it seems like you have Thyroid."
+            image = Image.open('positive.jpg')
+            st.image(image, caption='')
+        else:
+            thyroid_result = 'Congratulations, you do not have Thyroid.'
+            image = Image.open('negative.jpg')
+            st.image(image, caption='')
+
+        st.success(name + '' + thyroid_result)
 
 
 # Liver prediction page
