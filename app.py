@@ -58,7 +58,9 @@ with st.sidebar:
         'Lung Cancer Prediction',
         'Kidney Disease Prediction',
         'Breast Cancer Prediction',
-        
+        'Thyroid Disease Prediction',
+        'Blood Cancer Prediction',
+        'Prostate Cancer Predictio',       
     ],
         icons=['house-add','activity', 'heart-pulse', 'person-add','bar-chart','person-plus','lungs','heart','gender-female','gear', 'book'],
         default_index=0)
