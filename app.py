@@ -64,7 +64,7 @@ with st.sidebar:
         default_index=0)
     
 # About App
-if selected == 'About Predimed WebApp':
+if selected == 'About Predimed':
     st.title('Predimed - Multi Disease Predictor')
     st.write(
         """
@@ -75,7 +75,7 @@ if selected == 'About Predimed WebApp':
         """
     )
 # About Author
-if selected == 'Authors Dashboard':
+if selected == 'Home Page':
     st.title('Team Members for Model Building')
     st.write(
         """
