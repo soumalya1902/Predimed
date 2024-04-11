@@ -60,7 +60,7 @@ with st.sidebar:
         'Breast Cancer Prediction',
         'Thyroid Disease Prediction',
         'Blood Cancer Prediction',
-        'Prostate Cancer Predictio',       
+        'Prostate Cancer Prediction',       
     ],
         icons=['house-add','activity', 'heart-pulse', 'person-add','bar-chart','person-plus','lungs','heart','gender-female','gear', 'book'],
         default_index=0)
