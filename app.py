@@ -47,7 +47,7 @@ lung_cancer_model = joblib.load('models/lung_cancer_model.sav')
 # sidebar
 with st.sidebar:
     selected = option_menu('Predimed Model', [
-        'Authors Dashboard',
+        'Home Page',
         'About Predimed',
         'Disease Prediction',
         'Diabetes Prediction',
