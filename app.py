@@ -62,7 +62,7 @@ with st.sidebar:
         'Blood Cancer Prediction',
         'Prostate Cancer Prediction',       
     ],
-        icons=['house-add','activity', 'heart-pulse', 'person-add','bar-chart','person-plus','lungs','heart','gender-female','gear', 'book'],
+        icons=['house-add','activity', 'heart-pulse', 'person-add','bar-chart','person-plus','lungs','heart','gender-female','gear', 'book','droplet','droplet','droplet'],
         default_index=0)
     
 # About App
