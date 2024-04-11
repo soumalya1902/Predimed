@@ -52,7 +52,7 @@ with st.sidebar:
     selected = option_menu('Predimed Model', [
         'Home Page',
         'About Predimed',
-        'Disease Prediction',
+        'Multi Disease Prediction',
         'Diabetes Prediction',
         'Heart Disease Prediction',
         'Parkinson Prediction',
@@ -91,7 +91,7 @@ if selected == 'Home Page':
 
 
 # multiple disease prediction
-if selected == 'Disease Prediction': 
+if selected == 'Multi Disease Prediction': 
     # Create disease class and load ML model
     disease_model = DiseaseModel()
     disease_model.load_xgboost('model/xgboost_model.json')
